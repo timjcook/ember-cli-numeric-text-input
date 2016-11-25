@@ -8,23 +8,21 @@ Implementation for this addon based on [this StackOverflow answer](http://stacko
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+* `ember install ember-cli-numeric-input-text`
 
-## Running
+## Usage
 
-* `ember serve`
-* Visit your app at http://localhost:4200.
+- Import the mixin into an Ember class.
+- Call the `applyNumericOnlyToInputs` function in your `didInsertElement` hook.
+- Pass in a jQuery collection of inputs that you want to apply this function to.
 
-## Running Tests
+_Example:_
+```
+import NumericTextInput from 'numeric-text-input';
 
-* `npm test` (Runs `ember try:testall` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
-
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [http://ember-cli.com/](http://ember-cli.com/).
+export default Component.extend(NumericTextInput, {
+  didInsertElement() {
+    this.applyNumericOnlyToInputs(this.$('input[type=\'number\'], input[type=\'tel\']'));
+  }
+});
+```
