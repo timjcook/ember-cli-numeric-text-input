@@ -1,6 +1,8 @@
 # Ember-cli-numeric-text-input
 
-This README outlines the details of collaborating on this Ember addon.
+This addon allows you to target a group of inputs and prevent non-numeric characters being added.
+The aim is to allow other commands to be maintained.
+Implementation for this addon based on [this StackOverflow answer](http://stackoverflow.com/questions/469357/html-text-input-allow-only-numeric-input).
 
 ## Installation
 
